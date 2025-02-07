@@ -12,7 +12,7 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 import json
 import random
 
-TOKEN = "MY_TOKEN"
+TOKEN = "7765768288:AAGTYIWLJaQOQj1LpGKA9UC5U2r-70usSn4"
 
 bot = Bot(token=TOKEN)
 storage = MemoryStorage()
@@ -100,7 +100,6 @@ async def handle_buttons(callback_query: CallbackQuery, state: FSMContext):
         new_text = "Практика пока не реализована)))"
 
 
-
 @dp.callback_query_handler(lambda c: c.data.startswith("category_"))
 async def select_category(callback_query: CallbackQuery, state: FSMContext):
     category = callback_query.data.split("_")[1]
@@ -136,7 +135,6 @@ async def select_level(callback_query: CallbackQuery, state: FSMContext):
             data = json.load(file)
         random_terms = random.sample(data["terms"], 15)
     else:
-        print(12)
         with open('baza.json', 'r', encoding='utf-8') as file:
             data = json.load(file)
         random_terms = random.sample(data['terms'], 15)
