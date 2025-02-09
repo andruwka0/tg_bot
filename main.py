@@ -12,7 +12,7 @@ from aiogram.dispatcher.filters.state import State, StatesGroup
 import json
 import random
 
-TOKEN = "7765768288:AAGTYIWLJaQOQj1LpGKA9UC5U2r-70usSn4"
+TOKEN = ""
 
 bot = Bot(token=TOKEN)
 storage = MemoryStorage()
